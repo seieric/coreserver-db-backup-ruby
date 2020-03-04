@@ -1,0 +1,8 @@
+account: xxxxxx
+server_name: m99999.coreserver.jp
+api_secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+mysql:
+ - xxxxxx_db1
+ - xxxxxx_db2
+pgsql:
+ - xxxxxx_db1
