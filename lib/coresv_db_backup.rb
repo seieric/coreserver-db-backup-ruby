@@ -1,6 +1,6 @@
 require "coresv_db_backup/version"
 
-module CoresvDbBackup
+module CoresvDBBackup
   class Error < StandardError; end
   # Your code goes here...
 end

@@ -1,6 +1,6 @@
-RSpec.describe CoresvDbBackup do
+RSpec.describe CoresvDBBackup do
   it "has a version number" do
-    expect(CoresvDbBackup::VERSION).not_to be nil
+    expect(CoresvDBBackup::VERSION).not_to be nil
   end
 
   it "does something useful" do

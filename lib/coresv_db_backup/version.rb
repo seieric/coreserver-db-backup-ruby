@@ -1,3 +1,3 @@
-module CoresvDbBackup
+module CoresvDBBackup
   VERSION = "0.1.0"
 end

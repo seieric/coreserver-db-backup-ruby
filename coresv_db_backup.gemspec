@@ -2,7 +2,7 @@ require_relative 'lib/coresv_db_backup/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "coresv_db_backup"
-  spec.version       = CoresvDbBackup::VERSION
+  spec.version       = CoresvDBBackup::VERSION
   spec.authors       = ["seieric"]
   spec.email         = ["30688855+seieric@users.noreply.github.com"]
 
