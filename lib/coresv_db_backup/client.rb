@@ -1,5 +1,3 @@
-require ''
-
 module CoresvDBBackup
   class Client
     def initialize( account: , server_name: , api_secret_key: )
@@ -26,7 +24,7 @@ module CoresvDBBackup
       res = Net::HTTP.post_form(uri, params)
 
       raise APIError, "The API server returned status code #{res.code}" unless res.code == 200
-      raise APIError, "The response provided status code #{result["status_code"]}" unless result["status_code"] == 200
+      raise APIError, "The response provided status code #{result["status_code"]}\n#{result["message"]}" unless result["status_code"] == 200
 
       JSON.parse(res.body)
     end
