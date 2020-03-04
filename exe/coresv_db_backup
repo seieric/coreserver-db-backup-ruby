@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+require 'coresv_db_backup'
+require 'yaml'
+
+def dump(client, list, db_type)
+  db_nos = []
+  res = client.fetch_databases!(db_type)
+  res["result"].to_a.each do |db|
+    if list.include?(db[-1]["db_name"])
+      db_nos << db[-1]["no"].to_i
+      puts "Dump file for #{db[-1]["db_name"]} will be generated"
+    end
+  end
+  client.dump!(db_nos, db_type)
+end
+
+if File.exist?("#{ENV['HOME']}/backup_settings.yml")
+  puts "Configuration file loaded"
+  yaml = YAML.load_file("#{ENV['HOME']}/backup.yml")
+  @client = CoresvDBBackup::Client.new( account: yaml["account"], server_name: yaml["server_name"], api_secret_key: yaml["api_secret_key"])
+  unless yaml["mysql"].nil?
+    dump(@client, yaml["mysql"], "mysql")
+  end
+  unless yaml["pgsql"].nil?
+    dump(@client, yaml["pgsql"], "pgsql")
+  end
+else
+  puts "No configuration file detected, process cannot continue."
+  puts "Exit"
+end

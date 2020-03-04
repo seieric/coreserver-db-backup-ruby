@@ -27,7 +27,7 @@ module CoresvDBBackup
       res = Net::HTTP.post_form(uri, params)
       result = JSON.parse(res.body)
       raise APIError, "The API server returned status code #{res.code}" unless res.code == 200 || res.code == "200"
-      raise APIError, "The response provided status code #{result["status_code"]}\n#{result["message"]}" unless result["status_code"] == 200
+      raise APIError, "The response provided status code #{result["status_code"]}\n#{result["error_message"]}#{result["message"]}" unless result["status_code"] == 200
 
       result
     end
