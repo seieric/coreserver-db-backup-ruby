@@ -3,6 +3,7 @@
 
 ## インストール
 ターミナルで以下のコマンドを実行してください。
+
     $ gem install coresv_db_backup
 
 ## 使い方
@@ -14,6 +15,7 @@
 シェルスクリプトのサンプルは[こちら](https://github.com/eric/coreserver-db-backup-ruby/blob/master/backup.sh.example)です。
 
 以下のように、ターミナルで直接実行することもできます。
+
     $ coresv_db_backup
 
 ## Development
