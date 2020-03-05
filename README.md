@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/coresv_db_backup.svg)](https://badge.fury.io/rb/coresv_db_backup)
+[![Build Status](https://travis-ci.com/seieric/coreserver-db-backup-ruby.svg?branch=master)](https://travis-ci.com/seieric/coreserver-db-backup-ruby)
 # CoresvDBBackup
 コアサーバー・XREAのデータベースをCronでバックアップするためのスクリプトです。MySQL、PostgreSQLともにデータベース名を指定して、バックアップが可能です。自動バックアップがついていないプランでも、Cronを使うことにより、自動でバックアップを行えます。
 
