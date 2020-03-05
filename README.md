@@ -11,10 +11,10 @@
 ## 使い方
 インストールを行ったあとの手順です。
 
-まず、サーバーのコントロールパネルからAPIキーを発行してください。次に、ホームディレクトリ直下にbk_settings.ymlというファイルを作成し、必要な情報を書き込んでください。bk_settings.ymlのサンプルは[こちら](https://github.com/eric/coreserver-db-backup-ruby/blob/master/bk_settings.yml.example)です。
+まず、サーバーのコントロールパネルからAPIキーを発行してください。次に、ホームディレクトリ直下にbk_settings.ymlというファイルを作成し、必要な情報を書き込んでください。bk_settings.ymlのサンプルは[こちら](https://github.com/seieric/coreserver-db-backup-ruby/blob/master/bk_settings.yml.example)です。
 
 毎日自動でバックアップするには、こちらのシェルスクリプトをサーバー内の適当な場所に設定して、それをサーバーのCronに登録してください。
-シェルスクリプトのサンプルは[こちら](https://github.com/eric/coreserver-db-backup-ruby/blob/master/backup.sh.example)です。
+シェルスクリプトのサンプルは[こちら](https://github.com/seieric/coreserver-db-backup-ruby/blob/master/backup.sh.example)です。
 
 以下のように、ターミナルで直接実行することもできます。
 
@@ -28,7 +28,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coresv_db_backup. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/eric/coreserver-db-backup-ruby/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coresv_db_backup. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/seieric/coreserver-db-backup-ruby/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
