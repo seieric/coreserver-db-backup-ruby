@@ -1,28 +1,20 @@
-# CoresvDbBackup
+# CoresvDBBackup
+コアサーバー・XREAのデータベースをCronでバックアップするためのスクリプトです。MySQL、PostgreSQLともにデータベース名を指定して、バックアップが可能です。自動バックアップがついていないプランでも、Cronを使うことにより、自動でバックアップを行えます。
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/coresv_db_backup`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'coresv_db_backup'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
+## インストール
+ターミナルで以下のコマンドを実行してください。
     $ gem install coresv_db_backup
 
-## Usage
+## 使い方
+インストールを行ったあとの手順です。
 
-TODO: Write usage instructions here
+まず、サーバーのコントロールパネルからAPIキーを発行してください。次に、ホームディレクトリ直下にbk_settings.ymlというファイルを作成し、必要な情報を書き込んでください。bk_settings.ymlのサンプルは[こちら](https://github.com/eric/coreserver-db-backup-ruby/blob/master/bk_settings.yml.example)です。
+
+毎日自動でバックアップするには、こちらのシェルスクリプトをサーバー内の適当な場所に設定して、それをサーバーのCronに登録してください。
+シェルスクリプトのサンプルは[こちら](https://github.com/eric/coreserver-db-backup-ruby/blob/master/backup.sh.example)です。
+
+以下のように、ターミナルで直接実行することもできます。
+    $ coresv_db_backup
 
 ## Development
 
@@ -32,7 +24,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coresv_db_backup. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/coresv_db_backup/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coresv_db_backup. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/eric/coreserver-db-backup-ruby/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -41,4 +33,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CoresvDbBackup project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/coresv_db_backup/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the CoresvDbBackup project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/seieric/coreserver-db-backup-ruby/blob/master/CODE_OF_CONDUCT.md).
